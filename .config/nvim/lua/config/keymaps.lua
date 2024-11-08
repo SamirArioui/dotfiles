@@ -1,4 +1,4 @@
-function nvim_feedkeys(keys)
+local function nvim_feedkeys(keys)
 	local feedable_keys = vim.api.nvim_replace_termcodes(keys, true, false, true)
 	vim.api.nvim_feedkeys(feedable_keys, "n", false)
 end
